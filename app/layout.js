@@ -1,17 +1,18 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'iTask',
-  description: 'app for generate task',
-}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <meta charSet='UTF-8'></meta>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'></meta>
+        <title>iTask</title>
+        <link rel='icon' href='./icons8-task-96.png'></link>
+      </head>
+
+      <body>
+        {children}
+      </body>
     </html>
   )
 }
